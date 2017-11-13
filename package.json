@@ -1,0 +1,21 @@
+{
+    "name": "cohort-info",
+    "description": "pushing cohort info",
+    "main": "app.js",
+    "author": "PatrickBiffle",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "engines": {
+        "node": "^8.7.0"
+    },
+    "dependencies": {
+        "cors": "^2.8.4",
+        "express": "^4.16.2",
+        "gitignore": "^0.6.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.12.1"
+    }
+}
