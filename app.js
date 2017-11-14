@@ -26,9 +26,10 @@ const data = [
     cohortName: "17-01-WD-BD",
     cohortCode: "g110",
     numberOfStudents: 29
-    },
+    }
 ]
-function idPull(data, idNum) {
+
+function idCall(data, idNum) {
   for (let i = 0; i < data.length; i++) {
     if (data[i].id == idNum) {
       return data[i]
@@ -38,11 +39,11 @@ function idPull(data, idNum) {
 }
 
 app.get("/", function(request, response) {
-  response.json(data)
+  response.json({data})
 })
 
 app.get("/:id", function(request, response) {
-  if (!idPull(data, request.params.id)) {
+  if (!idCall(data, request.params.id)) {
       response.status(404)
       response.json({
           error: {
