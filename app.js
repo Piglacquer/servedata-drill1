@@ -29,12 +29,12 @@ const data = [
     },
 ]
 function idPull(data, idNum) {
-  for (let i = 0; i<data.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     if (data[i].id == idNum) {
       return data[i]
     }
   }
-  return false;
+  return false
 }
 
 app.get("/", function(request, response) {
@@ -43,7 +43,7 @@ app.get("/", function(request, response) {
 
 app.get("/:id", function(request, response) {
   if (!idPull(data, request.params.id)) {
-      response.status = 404
+      response.status(404)
       response.json({
           error: {
               "message": "No record found!"
