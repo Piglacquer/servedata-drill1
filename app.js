@@ -51,7 +51,7 @@ app.get("/:id", function(request, response) {
           }
       })
     }
-  response.json(idPull(data, request.params.id))
+  response.json(idCall(data, request.params.id))
 })
 
 console.log("it's healing me")
